@@ -91,3 +91,31 @@ def grid_is_square(arglist):
     return True
 
 
+def cv_match(sentence, pattern):
+    """
+    Makes the list of words that match vowels and consonants pattern in the sentence.
+    Parameters: sentence (str)
+                pattern (str)
+    Returns: the list of words that match the pattern
+    """
+    return_list = []
+    words = sentence.split()
+    vowels = "aeiouAEIOU"
+    consonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+    for word in words:
+        match = 1
+        if len(word) == len(pattern):
+            for i in range(len(word)):
+                if pattern[i] == 'v' and word[i] in vowels:
+                    continue
+                elif pattern[i] == 'c' and word[i] in consonants:
+                    continue
+                else:
+                    match = 0
+                    break
+            if match == 1:
+                return_list.append(word)
+    return return_list
+
+
+print(cv_match("Assume sentences are simply one or more words separated by spaces and have no punctuation or any other nonalphabetic characters", "vcv"))
