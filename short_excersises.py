@@ -74,3 +74,20 @@ def column2list(grid, n):
     for row in grid:
         return_list.append(row[n])
     return return_list
+
+
+def grid_is_square(arglist):
+    """
+    Check if a grid is a square.
+
+    Parameters: arglist (list)
+    Returns: True if the grid is a square, False otherwise
+    """
+    if not arglist:
+        return False
+    for row in arglist:
+        if len(row) != len(arglist):
+            return False
+    return True
+
+
