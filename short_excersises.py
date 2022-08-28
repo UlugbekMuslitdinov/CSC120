@@ -118,4 +118,22 @@ def cv_match(sentence, pattern):
     return return_list
 
 
-print(cv_match("Assume sentences are simply one or more words separated by spaces and have no punctuation or any other nonalphabetic characters", "vcv"))
+def max_consec_sum(numbers, n):
+    """
+    max_consec_sum(numbers, n) returns the maximum sum of n consecutive elements of numbers, a list that contains any mix of ints and floats.
+    """
+    if not numbers or not n:
+        return None
+    if n > len(numbers):
+        return None
+    max_sum = 0
+    for i in range(len(numbers) - n + 1):
+        sum = 0
+        for j in range(n):
+            sum += numbers[i + j]
+        if sum > max_sum:
+            max_sum = sum
+    return max_sum
+
+
+
