@@ -21,7 +21,7 @@ def concat_elements(slist, startpos, stoppos):
     """
     # If no arguments are given, return None
     if not slist or not startpos or not stoppos:
-        return None
+        return ""
     if stoppos < startpos:
         return ""  # Return empty string if startpos is greater than stoppos
     if startpos < 0:
@@ -31,11 +31,12 @@ def concat_elements(slist, startpos, stoppos):
             slist
         )  # Set stoppos to the length of the list if it is greater than the length of the list
     return_string = ""
-    while startpos <= stoppos:
-        return_string += slist[startpos]
-        startpos += 1
+    for i in range(startpos, stoppos+1):
+        return_string += slist[i]
     return return_string
 
+
+print(concat_elements(['aa','bb','cc','dd'], 1, 3))
 
 def concat_elements2(slist, startpos, stoppos):
     """
