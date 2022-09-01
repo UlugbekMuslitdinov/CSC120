@@ -21,8 +21,10 @@ def make_grid(grid_size):
 
 def print_grid(grid):
     for i in range(len(grid)):
+        row = []
         for j in range(len(grid)):
-            print(grid[i][j], end=" ")
+            row.append(grid[i][j])
+        print(",".join(row))
         print()
 
 
