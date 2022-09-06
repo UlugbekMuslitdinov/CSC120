@@ -7,7 +7,7 @@
 # Import the random module.
 import random
 
-# Create a list of letters.
+# Create a slist of letters.
 letters = "abcdefghijklmnopqrstuvwxyz"
 
 
@@ -38,13 +38,13 @@ def make_grid(grid_size):
         grid_size (int): The size of the grid.
 
     Returns:
-        list: A list of strings that represent the grid.
+        list: A slist of strings that represent the grid.
 
     Pre-condition:
         grid_size is an integer.
 
     Post-condition:
-        A list of strings that represent the grid is returned.
+        A slist of strings that represent the grid is returned.
     """
     grid = []
     for i in range(grid_size):
@@ -59,13 +59,13 @@ def print_grid(grid):
     Prints the grid.
 
     Args:
-        grid (list): A list of strings that represent the grid.
+        grid (list): A slist of strings that represent the grid.
 
     Returns:
         None
 
     Pre-condition:
-        grid is a list of strings.
+        grid is a slist of strings.
 
     Post-condition:
         The grid is printed.

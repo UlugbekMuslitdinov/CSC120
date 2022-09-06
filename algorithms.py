@@ -33,7 +33,7 @@ def findSmallest(arr):
         if arr[i] < smallest:
             smallest = arr[i]
             smallest_index = i
-    return  smallest_index
+    return smallest_index
 
 
 def selectionSort(arr):
@@ -43,4 +43,34 @@ def selectionSort(arr):
         newArr.append(arr.pop(smallest))
     return newArr
 
+
 print(selectionSort([5, 3, 6, 2, 1, 10, 8]))
+
+
+# Find the sum of the slist with recursion
+def sumList(slist):
+    if len(slist) != 0:
+        current = slist.pop(0)
+        total = current + sumList(slist)
+        return total
+    else:
+        return 0
+
+
+print(sumList([2, 4, 6]))
+
+
+def binary_search(nums, item):
+    low = nums[0]
+    high = nums[len(nums)-1]
+    mid = (low+high+1)//2
+    print(nums)
+    if item == mid:
+        return "Item found!"
+    elif item < mid:
+        return binary_search([i for i in range(low, mid + 1)], item)
+    elif item > mid:
+        return binary_search([i for i in range(mid, high + 1)], item)
+
+
+print(binary_search([i for i in range(101)], 9))

@@ -12,9 +12,9 @@ def number2letter(n):
 
 def concat_elements(slist, startpos, stoppos):
     """
-    Concatenate elements of a list.
+    Concatenate elements of a slist.
 
-    Parameters: slist (list)
+    Parameters: slist (slist)
                 startpos (int)
                 stoppos (int)
     Returns: the concatenated string
@@ -29,7 +29,7 @@ def concat_elements(slist, startpos, stoppos):
     if stoppos > len(slist):
         stoppos = len(
             slist
-        )  # Set stoppos to the length of the list if it is greater than the length of the list
+        )  # Set stoppos to the length of the slist if it is greater than the length of the slist
     return_string = ""
     for i in range(startpos, stoppos+1):
         return_string += slist[i]
@@ -40,9 +40,9 @@ print(concat_elements(['aa','bb','cc','dd'], 1, 3))
 
 def concat_elements2(slist, startpos, stoppos):
     """
-    Concatenate elements of a list.
+    Concatenate elements of a slist.
 
-    Parameters: slist (list)
+    Parameters: slist (slist)
                 startpos (int)
                 stoppos (int)
     Returns: the concatenated string
@@ -57,7 +57,7 @@ def concat_elements2(slist, startpos, stoppos):
     if stoppos > len(slist):
         stoppos = len(
             slist
-        )  # Set stoppos to the length of the list if it is greater than the length of the list
+        )  # Set stoppos to the length of the slist if it is greater than the length of the slist
     return_string = "".join(slist[startpos : stoppos + 1])
 
     return return_string
@@ -65,11 +65,11 @@ def concat_elements2(slist, startpos, stoppos):
 
 def column2list(grid, n):
     """
-    Convert a column of a grid to a list.
+    Convert a column of a grid to a slist.
 
-    Parameters: grid (list)
+    Parameters: grid (slist)
                 n (int)
-    Returns: the list of the column
+    Returns: the slist of the column
     """
     return_list = []
     for row in grid:
@@ -81,7 +81,7 @@ def grid_is_square(arglist):
     """
     Check if a grid is a square.
 
-    Parameters: arglist (list)
+    Parameters: arglist (slist)
     Returns: True if the grid is a square, False otherwise
     """
     if not arglist:
@@ -94,10 +94,10 @@ def grid_is_square(arglist):
 
 def cv_match(sentence, pattern):
     """
-    Makes the list of words that match vowels and consonants pattern in the sentence.
+    Makes the slist of words that match vowels and consonants pattern in the sentence.
     Parameters: sentence (str)
                 pattern (str)
-    Returns: the list of words that match the pattern
+    Returns: the slist of words that match the pattern
     """
     return_list = []
     words = sentence.split()
@@ -121,7 +121,7 @@ def cv_match(sentence, pattern):
 
 def max_consec_sum(numbers, n):
     """
-    max_consec_sum(numbers, n) returns the maximum sum of n consecutive elements of numbers, a list that contains any mix of ints and floats.
+    max_consec_sum(numbers, n) returns the maximum sum of n consecutive elements of numbers, a slist that contains any mix of ints and floats.
     """
     if not numbers or not n:
         return None

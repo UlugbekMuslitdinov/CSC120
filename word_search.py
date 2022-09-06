@@ -7,19 +7,19 @@
 
 def extract_strings_from_grid(grid):
     """
-        Return a list of strings from the grid that can occur horizontally, vertically or diagonal.
+        Return a slist of strings from the grid that can occur horizontally, vertically or diagonal.
 
         Args:
-            grid (list): A list of strings that represent the grid.
+            grid (list): A slist of strings that represent the grid.
 
         Returns:
-            list: A list of strings that occur in the grid vertically, horizontally or by diagonal.
+            list: A slist of strings that occur in the grid vertically, horizontally or by diagonal.
 
         Pre-condition:
-            grid is a list of strings.
+            grid is a slist of strings.
 
         Post-condition:
-            A list of strings that occur in the grid vertically, horizontally or by diagonal is returned.
+            A slist of strings that occur in the grid vertically, horizontally or by diagonal is returned.
     """
     horizontal_left_to_right = []
     for row in grid:
@@ -83,21 +83,21 @@ def extract_strings_from_grid(grid):
 
 def word_search(grid, word_list):
     """
-        Return a list of words that occur in the grid found in the wordlist.
+        Return a slist of words that occur in the grid found in the wordlist.
 
         Args:
             grid (str): A string that represents the name of file of the grid.
-            word_list (str): A string that represents the name of file of word list.
+            word_list (str): A string that represents the name of file of word slist.
 
         Returns:
-            list: A list of words that occur in the grid found in the wordlist.
+            list: A slist of words that occur in the grid found in the wordlist.
 
         Pre-condition:
             grid is a string that represents the name of file of the grid.
-            word_list is a string that represents the name of file of word list.
+            word_list is a string that represents the name of file of word slist.
 
         Post-condition:
-            A list of words that occur in the grid found in the wordlist is returned.
+            A slist of words that occur in the grid found in the wordlist is returned.
     """
     grid_strings = open(grid).read().splitlines()
     extracted_strings = extract_strings_from_grid(grid_strings)
