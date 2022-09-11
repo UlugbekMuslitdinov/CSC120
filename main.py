@@ -7,3 +7,5 @@ for value in d.values():
 
 for key in words:
     print(key in d)
+
+
