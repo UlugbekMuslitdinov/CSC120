@@ -1,140 +1,20 @@
-def number2letter(n):
-    """
-    Convert a number to a letter.
-
-    Parameters: n (int) from 0 to 25
-
-    Returns: the letter (char) corresponding to n
-    """
-    letters = "abcdefghijklmnopqrstuvwxyz"
-    return letters[n]
+def words_ending_with(wordlist, tail):
+    returns = []
+    for word in wordlist:
+        if word[len(word)-len(tail):] == tail:
+            returns.append(word)
+    return returns
 
 
-def concat_elements(slist, startpos, stoppos):
-    """
-    Concatenate elements of a slist.
-
-    Parameters: slist (slist)
-                startpos (int)
-                stoppos (int)
-    Returns: the concatenated string
-    """
-    # If no arguments are given, return None
-    if not slist or not startpos or not stoppos:
-        return ""
-    if stoppos < startpos:
-        return ""  # Return empty string if startpos is greater than stoppos
-    if startpos < 0:
-        startpos = 0  # Set startpos to 0 if it is less than 0
-    if stoppos > len(slist):
-        stoppos = len(
-            slist
-        )  # Set stoppos to the length of the slist if it is greater than the length of the slist
-    return_string = ""
-    for i in range(startpos, stoppos+1):
-        return_string += slist[i]
-    return return_string
+def words_beginning_with(wordlist, head):
+    returns = []
+    for word in wordlist:
+        if word[:len(head)] == head:
+            returns.append(word)
+    return returns
 
 
-print(concat_elements(['aa','bb','cc','dd'], 1, 3))
-
-def concat_elements2(slist, startpos, stoppos):
-    """
-    Concatenate elements of a slist.
-
-    Parameters: slist (slist)
-                startpos (int)
-                stoppos (int)
-    Returns: the concatenated string
-    """
-    # If no arguments are given, return None
-    if not slist or not startpos or not stoppos:
-        return None
-    if stoppos < startpos:
-        return ""  # Return empty string if startpos is greater than stoppos
-    if startpos < 0:
-        startpos = 0  # Set startpos to 0 if it is less than 0
-    if stoppos > len(slist):
-        stoppos = len(
-            slist
-        )  # Set stoppos to the length of the slist if it is greater than the length of the slist
-    return_string = "".join(slist[startpos : stoppos + 1])
-
-    return return_string
-
-
-def column2list(grid, n):
-    """
-    Convert a column of a grid to a slist.
-
-    Parameters: grid (slist)
-                n (int)
-    Returns: the slist of the column
-    """
-    return_list = []
-    for row in grid:
-        return_list.append(row[n])
-    return return_list
-
-
-def grid_is_square(arglist):
-    """
-    Check if a grid is a square.
-
-    Parameters: arglist (slist)
-    Returns: True if the grid is a square, False otherwise
-    """
-    if not arglist:
-        return False
-    for row in arglist:
-        if len(row) != len(arglist):
-            return False
-    return True
-
-
-def cv_match(sentence, pattern):
-    """
-    Makes the slist of words that match vowels and consonants pattern in the sentence.
-    Parameters: sentence (str)
-                pattern (str)
-    Returns: the slist of words that match the pattern
-    """
-    return_list = []
-    words = sentence.split()
-    vowels = "aeiouAEIOU"
-    consonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
-    for word in words:
-        match = 1
-        if len(word) == len(pattern):
-            for i in range(len(word)):
-                if pattern[i] == 'v' and word[i] in vowels:
-                    continue
-                elif pattern[i] == 'c' and word[i] in consonants:
-                    continue
-                else:
-                    match = 0
-                    break
-            if match == 1:
-                return_list.append(word)
-    return return_list
-
-
-def max_consec_sum(numbers, n):
-    """
-    max_consec_sum(numbers, n) returns the maximum sum of n consecutive elements of numbers, a slist that contains any mix of ints and floats.
-    """
-    if not numbers or not n:
-        return None
-    if n > len(numbers):
-        return None
-    max_sum = 0
-    for i in range(len(numbers) - n + 1):
-        sum = 0
-        for j in range(n):
-            sum += numbers[i + j]
-        if sum > max_sum:
-            max_sum = sum
-    return max_sum
-
-
-
+def primary_stress_position(phoneme_list):
+    for i in range(len(phoneme_list)):
+        if '1' in phoneme_list[i]:
+            return i
