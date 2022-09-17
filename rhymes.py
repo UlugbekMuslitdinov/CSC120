@@ -62,7 +62,7 @@ def find_rhyme(word, words_set):
         match_range = []
         for i in range(len(pron)):
             if "1" in pron[i]:
-                match_range = pron[i - 1 :]
+                match_range = pron[i - 1:]
         for word in words_set:
             for sound in words_set[word]:
                 if match_range[1:] == sound[len(sound) - len(match_range) + 1:]:   # Checks if the sounds after the primary stress match.
