@@ -1,30 +1,34 @@
-class Temp:
+def canonicalize_date(date_str):
+    """
+    Canonicalize a date string to the format YYYY-MM-DD.
 
-    def __init__(self, temp, unit):
-        self._temp = temp
-        self._unit = unit
+    Args:
+        date_str (str): A date string in the format yyyy-mm-dd or mm/dd/yyyy or MonthName   dd   yyyy.
 
-    def __str__(self):
-        return str(self._temp) + str(self._unit)
-
-    def to_Celcius(self):
-        if self._unit == 'C':
-            return self._temp
-        elif self._unit == 'F':
-            return (self._temp - 32) * 5 / 9
-        else:
-            return self._temp
-
-    def __eq__(self, other):
-        return self.to_Celcius() == other.to_Celcius()
-
-    def __lt__(self, other):
-        return self.to_Celcius() < other.to_Celcius()
-
-    def __gt__(self, other):
-        return self.to_Celcius() > other.to_Celcius()
-
-    def __ne__(self, other):
-        return self.to_Celcius() != other.to_Celcius()
-
-
+    Returns:
+        str: The date string in the format YYYY-MM-DD.
+    """
+    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    date_list = date_str.split()
+    if len(date_list) == 1:
+        date_list = date_list[0].split("/")
+    if len(date_list) == 1:
+        date_list = date_list[0].split("-")
+    if date_list[0] in months:
+        day = date_list[1]
+        year = date_list[2]
+        month_num = 0
+        for i in range(len(months)):
+            if date_list[0] == months[i]:
+                month_num = i + 1
+        return "{:d}-{:d}-{:d}".format(int(year), int(month_num), int(day))
+    if 0 < int(date_list[0]) < 13:
+        month_num = date_list[0]
+        day = date_list[1]
+        year = date_list[2]
+        return "{:d}-{:d}-{:d}".format(int(year), int(month_num), int(day))
+    if len(date_list[0]) == 4:
+        year = date_list[0]
+        month_num = date_list[1]
+        day = date_list[2]
+        return "{:d}-{:d}-{:d}".format(int(year), int(month_num), int(day))
