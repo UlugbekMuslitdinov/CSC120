@@ -1,0 +1,19 @@
+I 1960-02-27 : U.S. Olympic hockey team beats Soviet Union
+I 1897-2-27 : Britain recognizes U.S. authority over Western Hemisphere
+I Apr 5 1974 : World Trade Center, then the world's tallest building, opens in New York
+I 1946-1-10: UN General Assembly meets for 1st time (London)
+R Feb 27 1960
+I 3/4/1861 : Abraham Lincoln is inaugurated as 16th US President
+I 4/5/1242: Alexander Nevsky of Novgorod defeats Teutonic Knights in the Battle of the Ice
+I Apr 5 1879 : Chile declares war on Bolivia and Peru, starting the War of the Pacific
+R 1879-04-05
+I 6/25/1667 : First blood transfusion performed by French Doctor Jean-Baptiste Denys
+I 1876-06-25 : Battle of the Little Bighorn
+R 6/25/1876
+I Jul 20 1881 : Sioux Indian Chief Sitting Bull, surrenders to US federal troops
+I Jul 20 1921: Congresswoman Alice Mary Robertson becomes the first woman to preside over the US House of Representatives
+I 1954-07-20: Armistice for Indo-China signed, Vietnam separates into North & South
+I 1969-7-20: 1st Moon Landing: Neil Armstrong and Buzz Aldrin from Apollo 11
+R 7/20/1921
+R 07/20/1969
+R Jul 20 1954
