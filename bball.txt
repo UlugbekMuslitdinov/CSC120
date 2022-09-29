@@ -1,0 +1,12 @@
+Baylor (Big 12)	34	3
+Tennessee (Southeastern)	34	3
+Stanford (Pac-12)	36	1
+Marist (Metro Atlantic)	31	3
+Xavier (Atlantic 10)	29	3
+Duke (Atlantic Coast)	36	1
+Texas A&M (Big 12)	33	5
+Gonzaga (West Coast)	31	5
+Bowling Green (Mid-American)	28	5
+Miami (FL) (Atlantic Coast)	32	5
+UCLA (Pac-12)	32	5
+Fresno St. (Western Athletic)	25	8
