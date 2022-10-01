@@ -1,4 +1,28 @@
+"""
+    File: bball.py
+    Author: Ulugbek Muslitdinov - CSC 120 FA22 001
+    Purpose: Find the best conferences in the NCAA by reading the file and
+    creating the ConferenceSet object and the Team object.
+"""
+
+
 class Team:
+    """
+    This class is used to process each line of the file and create the Team object.
+
+    Attributes:
+        line (list): The list of words in the line.
+        name (str): The name of the team.
+        conference (str): The name of the conference.
+        wins (int): The number of wins.
+        losses (int): The number of losses.
+
+    Methods:
+        name(): Returns the name of the team.
+        conf(): Returns the name of the conference.
+        win_ratio(): Returns the win ratio of the team.
+        __str__(): Returns the string representation of the Team object.
+    """
 
     def __init__(self, line):
         self.name = line[0]
@@ -20,6 +44,19 @@ class Team:
 
 
 class Conference:
+    """
+    This class is used to store the list of Team objects and calculate the average win ratio of the conference.
+
+    Attributes:
+        conf (str): The name of the conference.
+        teams (list): The list of Team objects.
+
+    Methods:
+        name(): Returns the name of the conference.
+        add(team): Adds the Team object to the list of Team objects.
+        win_ratio_avg(): Returns the average win ratio of the conference.
+        __str__(): Returns the string representation of the Conference object.
+    """
 
     def __init__(self, conf):
         self.name = conf
@@ -47,6 +84,16 @@ class Conference:
 
 
 class ConferenceSet:
+    """
+    This class is used to store the list of Conference objects and find the best conference.
+
+    Attributes:
+        conferences (list): The list of Conference objects.
+
+    Methods:
+        add(team): Adds the Team object to the list of Conference objects.
+        best(): Returns the name of the best conferences and the average win ratio of the best conferences.
+    """
 
     def __init__(self):
         self.conferences = []
@@ -76,6 +123,21 @@ class ConferenceSet:
 
 
 def main():
+    """
+    This function is used to read the file and create the ConferenceSet object and the Team object.
+
+    Parameters:
+        None
+
+    Returns:
+        None
+
+    Pre-conditions:
+        User must enter the name of existing file.
+
+    Post-conditions:
+        None
+    """
     confs = ConferenceSet()
     f_name = input()
     file = open(f_name, 'r')
