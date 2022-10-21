@@ -13,7 +13,7 @@ letters = "abcdefghijklmnopqrstuvwxyz"
 
 def init():
     """
-    Gets the grid size and seed value from the user.
+    Gets the grid size and seed name from the user.
 
     Returns:
         int: The grid size.

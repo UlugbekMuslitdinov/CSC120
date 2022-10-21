@@ -30,7 +30,7 @@ class LinkedList:
         self._head = self._head._next
 
     def sort(self):
-        # sort the linked list in descending order by value
+        # sort the linked list in descending order by name
         current = self._head
         sorted =[current]
         current = current._next

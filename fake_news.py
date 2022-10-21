@@ -68,17 +68,17 @@ class LinkedList:
     The linked list can be sorted in descending order by count.
 
     Attributes:
-        head (Node): The initial Node the linked list
+        _head (Node): The initial Node the linked list
 
     Methods:
         is_empty(): Returns True if the linked list is
             empty, False otherwise
-        head(): Returns the head of the linked list
+        _head(): Returns the _head of the linked list
         update_count(word): Updates the count of the
             word in the linked list by 1
         add(word): Adds a new node to the linked
             list with the word and count of 1
-        rm_from_hd(): Removes the head of the linked list
+        rm_from_hd(): Removes the _head of the linked list
         insert_after(node1, node2): Inserts node2 after node1
         sort(): Sorts the linked list in descending order by count
         get_nth_highest_count(n): Returns the nth highest
@@ -116,7 +116,7 @@ class LinkedList:
         self._head = new_node
 
     def rm_from_hd(self):
-        # Remove the head of the linked list
+        # Remove the _head of the linked list
         if self._head is None:
             return
         self._head = self._head.next()

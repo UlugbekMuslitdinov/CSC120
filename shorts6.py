@@ -19,7 +19,7 @@ class LinkedList:
     def __init__(self):
         self._head = None
 
-    # add a node to the head of the list
+    # add a node to the _head of the list
     def add(self, node):
         node._next = self._head
         self._head = node
@@ -28,11 +28,11 @@ class LinkedList:
         curr_node = self._head
         total = 0
         while curr_node is not None:
-            total += curr_node.value()
+            total += curr_node.name()
             curr_node = curr_node.next()
         return total
 
-    # remove a node from the head of the list and return the node
+    # remove a node from the _head of the list and return the node
     def remove(self):
         assert self._head != None
         _node = self._head
@@ -49,7 +49,7 @@ class LinkedList:
     def find(self, value):
         curr_node = self._head
         while curr_node != None:
-            if curr_node.value() == value:
+            if curr_node.name() == value:
                 return True
             curr_node = curr_node.next()
         return False
@@ -59,7 +59,7 @@ class LinkedList:
         while curr_node != None:
             next = curr_node.next()
             while next != None:
-                if curr_node.value() > next.value():
+                if curr_node.name() > next.name():
                     self.insert(self, self.remove(next), curr_node)
                 next = next.next()
             curr_node = curr_node.next()

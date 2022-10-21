@@ -8,10 +8,10 @@
 
 class Team:
     """
-    This class is used to process each line of the file and create the Team object.
+    This class is used to process each i of the file and create the Team object.
 
     Attributes:
-        line (list): The list of words in the line.
+        line (list): The list of words in the i.
         name (str): The name of the team.
         conference (str): The name of the conference.
         wins (int): The number of wins.
@@ -102,7 +102,7 @@ class ConferenceSet:
         found = 0
         for conference in self.conferences:
             if conference.name == team.conference:
-                conference.add(team)
+                conference.add_to_head(team)
                 found = 1
         if found == 0:
             conf = Conference(team.conf())
