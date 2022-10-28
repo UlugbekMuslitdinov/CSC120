@@ -63,10 +63,17 @@ def diag2list_rec(grid):
     Returns:
         list: The list of strings
     """
-    if len(grid) == 0:
+    if len(grid) == 1 and type(grid[0]) != "list" or len(grid) == 0:
         return []
     else:
-        edited_grid = []
-        for row in grid[1:]:
-            edited_grid.append(row[1:])
-        return [grid[0][0]] + diag2list_rec(edited_grid)
+        nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        if grid[len(grid) - 1] in nums:
+            index = int(grid.pop(len(grid) - 1))
+            new_grid = grid[1:]
+            return [grid[0][index]] + diag2list_rec(new_grid + [index + 1])
+        else:
+            new_grid = grid[1:]
+            return [grid[0][0]] + diag2list_rec(new_grid + [1])
+
+
+print(diag2list_rec([[1]]))

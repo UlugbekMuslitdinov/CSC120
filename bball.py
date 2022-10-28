@@ -45,15 +45,15 @@ class Team:
 
 class Conference:
     """
-    This class is used to store the list of Team objects and calculate the average win ratio of the conference.
+    This class is used to store the list of Team obj and calculate the average win ratio of the conference.
 
     Attributes:
         conf (str): The name of the conference.
-        teams (list): The list of Team objects.
+        teams (list): The list of Team obj.
 
     Methods:
         name(): Returns the name of the conference.
-        add(team): Adds the Team object to the list of Team objects.
+        add(team): Adds the Team object to the list of Team obj.
         win_ratio_avg(): Returns the average win ratio of the conference.
         __str__(): Returns the string representation of the Conference object.
     """
@@ -85,13 +85,13 @@ class Conference:
 
 class ConferenceSet:
     """
-    This class is used to store the list of Conference objects and find the best conference.
+    This class is used to store the list of Conference obj and find the best conference.
 
     Attributes:
-        conferences (list): The list of Conference objects.
+        conferences (list): The list of Conference obj.
 
     Methods:
-        add(team): Adds the Team object to the list of Conference objects.
+        add(team): Adds the Team object to the list of Conference obj.
         best(): Returns the name of the best conferences and the average win ratio of the best conferences.
     """
 

@@ -70,10 +70,10 @@ class Date:
 
 class DateSet:
     """
-    This class is used to store the Date class objects.
+    This class is used to store the Date class obj.
 
     Attributes:
-        dates (list): The list of Date class objects.
+        dates (list): The list of Date class obj.
 
     Methods:
         add_date(date, event): Adds the Date class object to the list of dates.
